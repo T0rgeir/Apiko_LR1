@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+	<title> LR_1 </title>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="container">
+			<ul class="container__nav" id="nav">
+				<li class="container__nav-item menu-task_1 active" id="menu-task_1"> Завдання №1 </li>
+				<li class="container__nav-item menu-task_2" id="menu-task_2"> Завдання №2 </li>
+			</ul>
+			<div class="container__content">
+				<div class="container__content-leftside">
+					<p class="text-task_1 active"> 
+						Створити масив обєктів типу <span> { firstName: 'John', lastName: 'Snow', rating: 100 } </span> для всі одногрупників (оцінки взяти із попереднього курсу чи семестру за певний предмет) та написати методи для можливості: вивести імена та прізвища одногрупників по алфавіту, вивести імена та прізвища за оцінками, вивести ім’я та прізвище учня із максимальною мінімальною та середньою оцінками.
+						<br/> <br/>
+						Створити новий масив на основі старого в якому буде додаткове поле <span> { rate: 100 } </span>, де rate на скільки відсотків учень відстав від лідера (найбільше значення поля ratting).
+					</p>
+					<p class="text-task_2"> 
+						Створити метод який генерує рандомну строку пароль. Враховуючи можливість задати довжину, наявність чисел та символів.
+					</p>
+				</div>
+				<div class="container__content-rightside">
+					<div class="container__content-rightside_item">
+
+						<div class="item task__list task_1 active">
+							<div class="item__options">
+								<select id="listbox" onchange="changeSortType()">
+									<option> За алфавітом </option>
+									<option> За балом </option>
+								</select>
+							</div>
+							<div class="item__content">
+								<div class="item__content-results">
+
+									<div class="results__item">
+										<div class="results__item-topline">
+											<span> 1 </span>
+											<p> Найкращий бал </p>
+										</div>
+										<div class="results__item-content" id="_1">
+										</div>
+									</div>
+
+									<div class="results__item">
+										<div class="results__item-topline">
+											<span> 2 </span>
+											<p> Середній бал </p>
+										</div>
+										<div class="results__item-content" id="_2">
+										</div>
+									</div>
+
+									<div class="results__item">
+										<div class="results__item-topline">
+											<span> 3 </span>
+											<p> Найгірший бал </p>
+										</div>
+										<div class="results__item-content" id="_3">
+										</div>
+									</div>
+
+								</div>
+								<div class="item__content-list" id="list"></div>
+							</div>
+						</div>
+
+						<div class="item task__password task_2">
+							<div class="item__inputs">
+								<div class="item__inputs-area">
+									<input type="text" placeholder="Довжина паролю..." maxlength="2" id="string__length">
+									<p> Введене значення не являється числовим! </p>
+								</div>
+								<div class="item__input-btns">
+									<div class="item__input-btns_number">
+										<input type="radio" name="pass" id="is__number">
+										<p> Наявність чисел </p>
+									</div>
+									<div class="item__input-btns_symbols">
+										<input type="radio" name="pass" id="is__symbol">
+										<p> Наявність символів </p>
+									</div>
+									<div class="item__input-btns_hybrid">
+										<input type="radio" name="pass" id="is__hybrid">
+										<p> Наявність чисел та символів </p>
+									</div>
+								</div>
+								<button class="btn__generate" onclick="showPassword()"> Згенерувати </button>
+							</div>
+							<div class="item__password">
+								<p id="password__area"></p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/source/data.js"></script>
+	<script src="js/source/function.js"></script>
+	<script src="js/task_1/listOperations.js"></script>
+	<script src="js/task_2/passwordGeneration.js"></script>
+	<script src="js/common.js"></script>
+
+</body>
+</html>
